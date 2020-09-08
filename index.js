@@ -2,9 +2,9 @@
 function mapToNegativize(sourceArray){
     // return sourceArray.map(x => x * -1)
     let newArray = []
-    for (let i=0; i<array.length; i++){
+    for (let i=0; i<sourceArray.length; i++){
     let num = sourceArray[i] * -1
-    new.push(num)
+    newArray.push(num)
     }
     return newArray
 }
@@ -18,7 +18,7 @@ function mapToNoChange(sourceArray){
 function mapToDouble(sourceArray){
     // return sourceArray.map(x => x * 2)
     let newArray = []
-    for (let i=0; i<array.length; i++) {
+    for (let i=0; i<sourceArray.length; i++) {
         let num = sourceArray[i] * 2
         newArray.push(num)
     }
@@ -27,7 +27,7 @@ function mapToDouble(sourceArray){
 function mapToSquare(sourceArray){
     // return sourceArray.map(x => x * x)
     let newArray = []
-    for (let i=0; i<array.length; i++) {
+    for (let i=0; i<sourceArray.length; i++) {
         let num = sourceArray[i] ** 2
         newArray.push(num)
     }
@@ -39,10 +39,12 @@ function mapToSquare(sourceArray){
 function reduceToTotal(sourceArray, startingPoint=0){
     // return sourceArray.reduce(reducer, startingPoint)
     let total = startingPoint
-    for (let i=0; i<array.length; i++){
+    for (let i=0; i<sourceArray.length; i++){
         total += sourceArray[i]
     }
+    return total
 }
+
 function reduceToAllTrue(sourceArray){
     for(let i = 0; i < sourceArray.length; i++ ) {
         if (!sourceArray[i])
